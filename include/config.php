@@ -22,7 +22,7 @@ define('SQL_DEBUG', 2);
 
 /* Compare php version for date/time stuff etc! */
 	if (version_compare(PHP_VERSION, "5.1.0RC1", ">="))
-		date_default_timezone_set('Europe/London');
+		date_default_timezone_set('America/New_York');
 
 
 define('TIME_NOW', time());
@@ -78,9 +78,9 @@ $TBDEV['torrent_dir'] = ROOT_PATH . '/torrents'; # must be writable for httpd us
 
 # the first one will be displayed on the pages
 $TBDEV['announce_urls'] = array();
-$TBDEV['announce_urls'][] = "http://localhost/TB_ALPHA/announce.php";
+$TBDEV['announce_urls'][] = "http://localhost/announce.php";
 //$TBDEV['announce_urls'] = "http://localhost:2710/announce";
-//$TBDEV['announce_urls'] = "http://domain.com:83/announce.php";
+//$TBDEV['announce_urls'] = "http://btunderground.com:83/announce.php";
 
 if ($_SERVER["HTTP_HOST"] == "")
   $_SERVER["HTTP_HOST"] = $_SERVER["SERVER_NAME"];
@@ -109,9 +109,9 @@ $script = str_replace( "\\", "/", $script );
 //$TBDEV['peerlimit'] = 50000; //deprecated. no longer used.
 
 // Email for sender/return path.
-$TBDEV['site_email'] = "coldfusion@localhost";
+$TBDEV['site_email'] = "greenman@localhost";
 
-$TBDEV['site_name'] = "TBDEV.NET";
+$TBDEV['site_name'] = "BTUnderground";
 
 $TBDEV['language'] = 'en';
 //charset
@@ -141,8 +141,7 @@ define ('UC_MODERATOR', 4);
 define ('UC_ADMINISTRATOR', 5);
 define ('UC_SYSOP', 6);
 
-//Do not modify -- versioning system
-//This will help identify code for support issues at tbdev.net
 define ('TBVERSION','TBDev_2009_svn');
+define ('BTUVERSION','chasecutter_2013_github');
 
 ?>
